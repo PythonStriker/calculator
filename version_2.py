@@ -1,8 +1,10 @@
 from tkinter import *
+from tkinter.messagebox import showinfo
 
+#计算器主窗体
 root = Tk()
 root.geometry('250x380')
-root.title('一个普通计算器       version_1.0')
+root.title('一个普通计算器       version_2.0')
 frame_show = Frame(width=300,height=150,bg='#dddddd')
 
 #顶部区域
@@ -231,8 +233,11 @@ def lastNoteZero(String):
     return True
 
 def creatNewWindows():
-    pass
-
+    #计算器高级窗体
+    higher = Toplevel(root)
+    higher.geometry('200x200')
+    root.title('一个高级计算器       version_2.0')
+    
 #按键区域
 frame_bord = Frame(width=400,height=350,bg='#cccccc')
 button_del = Button(frame_bord,text = '←',width = 5,height =1,command = delete).grid(row = 0,column = 0)
