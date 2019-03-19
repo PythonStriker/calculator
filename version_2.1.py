@@ -164,7 +164,7 @@ def button_equal():
         result = '输入有误！'
     print(result, result > 0.001 , result // 10000000 == 0,type(result))
     # 显示结果
-    if result != '输入有误！' and result > 0.001 and result // 10000000 == 0 or result == 0:
+    if result != '输入有误！' and result > 0.001 and result//10000000 == 0 or result == 0:
         if type(result) == float:
             v.set('%7.3f' % result)
         elif type(result) == int:
@@ -263,12 +263,13 @@ def higherFunction(sign):
         if v.get() != '0':
             result = eval('1'+'/'+v.get())
         else:
-            pass
+            flag = 1
     else:
         if v.get() == '0':
-            v.set('3.141')
-
-        flag == 1
+            result = pi
+            v.set(result)
+        else:
+            result = eval(v.get())*pi
     if flag == 0 :
         if result < 0.001 and result // 10000000 == 0 :
             if type(result) == float:
@@ -277,6 +278,8 @@ def higherFunction(sign):
                 v.set(result)
         else:
             v.set('%e' % result)
+    else:
+        pass
 
 def creatNewWindows():
     # 计算器高级窗体
