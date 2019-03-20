@@ -162,7 +162,6 @@ def button_equal():
             result = eval(calcstr.strip())
     else:
         result = '输入有误！'
-    print(result, result > 0.001 , result // 10000000 == 0,type(result))
     # 显示结果
     if result != '输入有误！' and result > 0.001 and result//10000000 == 0 or result == 0:
         if type(result) == float:
@@ -260,7 +259,7 @@ def higherFunction(sign):
         else:
             result = log10(eval(v.get()))
     elif sign == '1/x':
-        if v.get() != '0':
+        if eval(v.get()) != 0:
             result = eval('1'+'/'+v.get())
         else:
             flag = 1
