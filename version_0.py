@@ -24,7 +24,7 @@ while(True):
                         flag = 1
                         break
         numberInclc += 1
-    print(clc)
+    #print(clc)
     if flag :
         pass
     else:
